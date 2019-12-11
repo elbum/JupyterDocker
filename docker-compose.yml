@@ -1,0 +1,14 @@
+object_detection:
+  image: datascience
+  container_name: datascience
+  restart: always
+  environment:
+     - TERM=xterm
+  hostname: '127.0.0.1'
+  ports:
+     - "8888:8888"         #JupyterNB
+
+  volumes:
+     - /Users/alboom/docker/MediumRepo-master/JupyterWithDocker/test.txt:/root/datascience/test.txt
+     - /Users/alboom/docker/MediumRepo-master/JupyterWithDocker/shared:/root/datascience/shared
+
